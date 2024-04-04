@@ -1,0 +1,33 @@
+button {
+    background-color: firebrick;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: .3s ease;
+}
+button::before,
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(28,79,99);
+    transition: .3s ease;
+    z-index: -1;
+}
+button::before {
+    left: 0;
+}
+button::after {
+    right: 0;
+}
+button:hover::before,
+button:hover::after {
+    width: 50%;
+}
+button:hover {
+    color: #c7c7c7;
+}
